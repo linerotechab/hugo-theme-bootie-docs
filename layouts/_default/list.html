@@ -1,16 +1,33 @@
 {{ partial "header.html" . }}
-{{ partial "language-switcher.html" . }}
+
 <div class="row">
-	<div class="col-sm-12 doc-main">
+	<div class="col-sm-8 doc-main">
 		<main role="main">
-			<article class="section-content">
-				<a id="title"></a>
-				<h1 class="doc-entry-title">{{ .Title }}</h1>
-				<section>
-					{{ .Content }}
-				</section>
-			</article>
+			<div class="doc-list-header">
+				<h3>Topics in {{ .Title }}</h3>
+			</div>
+			<div class="doc-list-entry">
+			<ul>
+	{{ range .Data.Pages }}
+				<li><a class="doc-entry" href="{{ .RelPermalink }}">
+					<span class="doc-entry-title">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</span>
+					{{ if .IsTranslated }}
+						{{ range .Translations }}
+								<span class="doc-entry-meta" > 
+									<a href ="{{ .Permalink }}" >({{ .Lang}}{{ if .IsPage }}{{ end }})</a>
+								</span>
+						{{ end}}
+					{{ end }}
+				</a></li>
+	{{ end }}
+			</ul>
+			</div>
 		</main>
 	</div> <!-- /.doc-main -->
+
+	{{ partial "sidebar-list.html" . }}
+
 </div> <!-- /.row -->
-{{ partial "footer.html" . }}
+</div> <!-- /.container -->
+</body>
+</html>
