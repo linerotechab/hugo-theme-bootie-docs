@@ -4,7 +4,8 @@
 <div class="row">
 	<div class="col-sm-8">
 		<p class="doc-footer-em" style="text-decoration: underline;">
-			<a href="https://stackoverflow.com/c/linerotech/questions" target="_blank">{{ i18n "questionsStatement" }} <i class="fa fa-external-link" aria-hidden="false"></i></a> 
+			<a href="https://stackoverflow.com/c/linerotech/questions" target="_blank">{{ i18n "questionsStatement" }}
+				<i class="fa fa-external-link" aria-hidden="false"></i></a>
 		</p>
 	</div>
 </div>
@@ -18,11 +19,11 @@
 			<a href="https://discord.gg/8yvHPpPsTw" title="Discord" target="_blank">
 				<i class="fab fa-discord fa-lg"></i>
 			</a>
-		  </li>
+		</li>
 		<li>
-		  <a href="https://www.linkedin.com/company/linerotech/" title="LinkedIn" target="_blank">
-		  	<i class="fab fa-linkedin fa-lg"></i>
-		  </a>
+			<a href="https://www.linkedin.com/company/linerotech/" title="LinkedIn" target="_blank">
+				<i class="fab fa-linkedin fa-lg"></i>
+			</a>
 		</li>
 		<li>
 			<a href="https://www.instagram.com/linero.tech/" title="Instagram" target="_blank">
@@ -33,7 +34,7 @@
 </footer>
 
 {{- if not .Site.IsServer }}
-	{{ partial "google_analytics.html" . }}
+{{ partial "google_analytics.html" . }}
 {{- end }}
 
 <script src="{{ $baseUrl }}/js/jquery.min.js"></script>
@@ -42,9 +43,12 @@
 <script src="{{ $baseUrl }}/js/ie10-viewport-bug-workaround.js"></script>
 <script src="{{ $baseUrl }}/js/bootie-docs.js"></script>
 <script src="https://unpkg.com/kotlin-playground@1" data-selector=".kotlin-code"></script>
-<script src="{{"js/hugo-learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
-<script src="{{"mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{" js/hugo-learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end
+	}}"></script>
+<script src="{{" mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end
+	}}"></script>
 <script>mermaid.initialize({ startOnLoad: true });</script>
 
 </body>
+
 </html>
