@@ -2,7 +2,7 @@
 
 title = "Student Success Week #2"
 
-categories = ["SSW"]
+categories = ["Common"]
 
 language= "Svenska"
 

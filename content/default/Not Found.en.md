@@ -2,7 +2,7 @@
 
 title = "Not Found"
 
-categories = ["Default"]
+categories = ["Common"]
 
 language= "English"
 
