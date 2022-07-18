@@ -2,7 +2,7 @@
 
 title = "Hittades inte"
 
-categories = ["Default"]
+categories = ["Common"]
 
 language= "Svenska"
 

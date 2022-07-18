@@ -2,7 +2,7 @@
 
 title = "Welcome"
 
-categories = ["Default"]
+categories = ["Common"]
 
 language= "English"
 
