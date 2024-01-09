@@ -1,8 +1,0 @@
-{{ if and (.Get "id") (.Get "name")}}
-<div class="checklist-item">
-    <input type="checkbox" id="{{ .Get "id" }}">
-    <label for="{{ .Get "id" }}"></label>
-    <p style="display: inline-block;" for="{{ .Get "id" }}"> {{ .Get "name" }}</p>
-</div>
-{{ end }}
-
